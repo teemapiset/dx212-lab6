@@ -1,0 +1,3 @@
+ตั้งใจpromptให้แย่ // คำนวณค่าโดยสารรถ NGV: 2 กม.แรก 10 บาท กม.ถัดไปกม.ละ 2 บาท เศษกิโลเมตรปัดขึ้น const calcFare = distanceKm => { if (typeof distanceKm !== "number" || !Number.isFinite(distanceKm) || distanceKm < 0) { return 0; // ติดลบหรือไม่ใช่ตัวเลข คืน 0 } const km = Math.ceil(distanceKm); // ปัดเศษกิโลเมตรขึ้น return km <= 2 ? 10 : 10 + (km - 2) * 2; };
+
+// ตัวอย่างการใช้งาน console.log(calcFare(2.1)); // 12 console.log(calcFare(5)); // 16
